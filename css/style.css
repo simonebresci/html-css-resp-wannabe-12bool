@@ -1,17 +1,3 @@
-/* .row {
-  width: 992px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-} */
-
-/* BLOCCO LEZIONI */
-/* #lezioni .row>.left,
-#lezioni .row>.right {
-  width: 50%;
-  float: left;
-} */
-
 #lezioni .row img {
   /* per centrare orizzontalmente */
   display: block;
@@ -23,14 +9,6 @@
   text-align: center;
 }
 
-/* BLOCCO STEPS */
-/* #steps .row>.left,
-#steps .row>.central,
-#steps .row>.right {
-  float: left;
-  width: 33%;
-} */
-
 #steps {
   text-align: center;
 }
@@ -40,27 +18,14 @@
   text-align: center;
 }
 
-/* #why .row>.first,
-#why .row>.second,
-#why .row>.third {
-  width: 100%;
-  margin-top: 80px;
-} */
-
 #why .container img {
   background-color: #428bca;
   border-radius: 50%;
-  padding: 30px
+  padding: 30px;
 }
 
-/* COMMON */
-/* .row::after {
-  content: '';
-  display: table;
-  clear: both;
-} */
-
 .container.grey {
+  /* background-color: #ffdddd; */
   background-color: #f9f9f9;
 }
 
@@ -68,29 +33,68 @@ img {
   height: 200px;
 }
 
-/* .clear {
-  clear: both;
-} */
+.container h1{
+  margin-bottom: 20px;
+}
+
+.container h3{
+  margin: 15px 0;
+}
+
+#lezioni, #steps {
+  margin-bottom: 50px;
+}
+
+/* Tutte le colonne della sezione why */
+#why [class*="col-"]{
+  margin-bottom: 50px;
+}
+
+#why hr{
+  margin-top:15px;
+}
+
+/* Padding testo */
+#lezioni [class*="col-"],
+#steps [class*="col-"],
+#why [class*="col-"]{
+  padding: 0 10px;
+}
+
 
 
 /* DEBUGGG */
 body{
   /* content:"Debug: versione Desktop"; */
-  background-color: rgba(0,0,255,0.1);
+  /* background-color: rgba(0,0,255,0.1); */
 }
 
-
+/* Regole formattazione versione tablet */
 @media screen and (max-width: 991px) {
   body{
     /* content:"Debug: versione Tablet"; */
-      background-color: rgba(0,255,0,0.1);
+      /* background-color: rgba(0,255,0,0.1); */
   }
+
+  /* Margine fra le sezioni */
+  #lezioni [class*="col-"],
+  #steps [class*="col-"]{
+    margin-bottom: 50px;
+  }
+
+  /* Padding testo */
+  #lezioni [class*="col-"],
+  #steps [class*="col-"],
+  #why [class*="col-"]{
+    padding: 0 25px;
+  }
+
 }
 
 @media screen and (max-width: 767px) {
   body{
     /* content:"Debug: versione cellulare"; */
-    background-color: rgba(255,0,0,0.1);
-}
+    /* background-color: rgba(255,0,0,0.1); */
+  }
 
 /* ****DEBUGGG */
