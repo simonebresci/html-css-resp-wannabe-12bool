@@ -25,11 +25,10 @@
 }
 
 .container.grey {
-  /* background-color: #ffdddd; */
   background-color: #f9f9f9;
 }
 
-img {
+.container img {
   height: 200px;
 }
 
@@ -62,20 +61,8 @@ img {
 }
 
 
-
-/* DEBUGGG */
-body{
-  /* content:"Debug: versione Desktop"; */
-  /* background-color: rgba(0,0,255,0.1); */
-}
-
-/* Regole formattazione versione tablet */
+/* Regole formattazione fino a larghezza tablet */
 @media screen and (max-width: 991px) {
-  body{
-    /* content:"Debug: versione Tablet"; */
-      /* background-color: rgba(0,255,0,0.1); */
-  }
-
   /* Margine fra le sezioni */
   #lezioni [class*="col-"],
   #steps [class*="col-"]{
@@ -89,12 +76,35 @@ body{
     padding: 0 25px;
   }
 
-}
-
-@media screen and (max-width: 767px) {
-  body{
-    /* content:"Debug: versione cellulare"; */
-    /* background-color: rgba(255,0,0,0.1); */
+  /* Sovrascrivi padding */
+  #why .container img {
+    padding: 20px;
   }
 
-/* ****DEBUGGG */
+  /* Ridimensiona immagini */
+  .container img{
+    height: 160px;
+  }
+
+}
+/* /Regole formattazione fino a larghezza tablet */
+
+/* Regole formattazione fino a larghezza cellulare  */
+@media screen and (max-width: 767px) {
+
+  /* Ridimensiona testo h1 */
+  .container h1{
+    font-size:28px;
+  }
+
+  /* Sovrascrivi padding */
+  #why .container img {
+    padding: 20px;
+  }
+
+  /* Ridimensiona immagini */
+  .container img{
+    height: 120px;
+  }
+}
+/* /Regole formattazione fino a larghezza cellulare  */
